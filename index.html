@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scrolled">
     <div class="container cntr-mxwdt">
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -173,7 +173,17 @@ If you are looking for a designer who can be supportive and good in Requirement 
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    const navEl = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY >= 100){
+        navEl.classList.add('navbar-scrolled');
+      }else if(window.scrollY < 100){
+        navEl.classList.remove('navbar-scrolled');
+      }
 
+    })
+  </script>
   
 </body>
 </html>
